@@ -1,4 +1,4 @@
-# ElectroGrid
+# ElectroGrid - Billing Service
 
 This is our third year first semester project for Programming Applications and Frameworks (PAF) module. We are supposed to develop a scalable web application for a company named ElectroGrid (EG) which is capable of doing online bill payment, bill automation and many more.
 
