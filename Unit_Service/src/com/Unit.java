@@ -74,7 +74,7 @@ public class Unit {
 			} 
 	 
 			// Prepare the html table to be displayed    
-			output = "<table border=\'1\'><tr><th>Account No</th><th>Email</th><th>Unit Total</th><th>Total Amount</th><th>Update</th><th>Remove</th></tr>";
+			output = "<table class='table table-bordered table-hover'><thead class='thead-dark'><tr><th>Account No</th><th>Email</th><th>Unit Total</th><th>Total Amount</th><th>Update</th><th>Remove</th></tr></th>";
 	 
 			String query = "select * from unit1";    
 			Statement stmt = (Statement) con.createStatement();
@@ -90,15 +90,15 @@ public class Unit {
 				 String uAmount = rs.getString("uAmount");
 				 
 				// Add into the html table 
-				output += "<tr><td><input id=\'hidUnitIDUpdate\' name=\'hidUnitIDUpdate\' type=\'hidden\' value=\'" + uID + "'>" 
+				output += "<tbody><tr><td><input id=\'hidUnitIDUpdate\' name=\'hidUnitIDUpdate\' type=\'hidden\' value=\'" + uID + "'>" 
 							+ uAccNo + "</td>"; 
 				output += "<td>" + uEmail + "</td>";
 				output += "<td>" + uTotalUnit + "</td>";
 				output += "<td>" + uAmount + "</td>";
 	 
 				// buttons     
-				output +="<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-secondary'></td>"       
-						+ "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-unitid='" + uID + "'>" + "</td></tr>"; 
+				output +="<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-success'></td>"       
+						+ "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-unitid='" + uID + "'>" + "</td></tr></tbody>"; 
 			
 			}
 			con.close(); 

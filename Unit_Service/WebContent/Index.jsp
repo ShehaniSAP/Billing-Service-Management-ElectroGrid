@@ -12,10 +12,17 @@
 <script src="Components/valicustom.js"></script> 
 </head>
 <body>
-<div class="container"> 
+ <nav class="navbar navbar-dark bg-dark" style="justify-content: center">
+            <h3 style="color: white">ElectroGrid</h3>
+     </nav>
+     <br>
+<div class="container"style="max-width: 90%"> 
+<div style="text-align: center">
+		<h1>Billing Service</h1><br></br>
+	</div>
 	<div class="row">  
-		<div class="col-6"> 
-			<h2>Billing Service </h2>
+		<div class="col-4"> 
+		
 				<form id="formUnit" name="formUnit" method="post" action="Index.jsp">  
 					Account No:  
  	 				<input id="uAccNo" name="uAccNo" type="text"  class="form-control form-control-sm">
@@ -26,16 +33,20 @@
 					<br>Total Amount:   
   					<input id="uAmount" name="uAmount" type="text"  class="form-control form-control-sm">
 					<br>  
-					<input id="btnSave" name="btnSave" type="button" value="SAVE" class="btn btn-primary">  
+					<input id="btnSave" name="btnSave" type="button" value="SAVE" class="btn btn-info">  
 					<input type="hidden" id="hidUnitIDSave" name="hidUnitIDSave" value=""> 
 				</form>
 				
+			   <br>
+			   
 				<div id="alertSuccess" class="alert alert-success"> </div>
 				
 			   <div id="alertError" class="alert alert-danger"></div>
-				
 			   <br>
-				<div id="divUnitGrid">
+			   </div>
+				
+				<div id="divUnitGrid"class="col-8" style="text-align: center">
+				<br>
 					<%
 						Unit UnitObj = new Unit();
 						out.print(UnitObj.readUnit());
@@ -45,7 +56,7 @@
 				 
 			</div>
 		</div>
-</div>
+
  
 </body>
 </html>
